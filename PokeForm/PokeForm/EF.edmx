@@ -1,0 +1,263 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="TestModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'Test.dbo.__PokemonAbilities' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="__PokemonAbilities">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Value" Type="varchar(max)" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'Test.dbo.__PokemonHeldItems' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="__PokemonHeldItems">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Value" Type="varchar(max)" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'Test.dbo.__PokemonMoves' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="__PokemonMoves">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Value" Type="varchar(max)" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'Test.dbo.__PokemonName' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="__PokemonName">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Pokemon" Type="varchar" MaxLength="2000" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'Test.dbo.__PokemonSprites' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="__PokemonSprites">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Value" Type="varchar" MaxLength="2000" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'Test.dbo.__PokemonStats' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="__PokemonStats">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Value" Type="varchar(max)" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'Test.dbo.__PokemonTypes' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="__PokemonTypes">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Value" Type="varchar(max)" />
+        </EntityType>
+        <EntityContainer Name="TestModelStoreContainer">
+          <EntitySet Name="__PokemonAbilities" EntityType="Self.__PokemonAbilities" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [__PokemonAbilities].[ID] AS [ID], 
+    [__PokemonAbilities].[Value] AS [Value]
+    FROM [dbo].[__PokemonAbilities] AS [__PokemonAbilities]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="__PokemonHeldItems" EntityType="Self.__PokemonHeldItems" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [__PokemonHeldItems].[ID] AS [ID], 
+    [__PokemonHeldItems].[Value] AS [Value]
+    FROM [dbo].[__PokemonHeldItems] AS [__PokemonHeldItems]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="__PokemonMoves" EntityType="Self.__PokemonMoves" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [__PokemonMoves].[ID] AS [ID], 
+    [__PokemonMoves].[Value] AS [Value]
+    FROM [dbo].[__PokemonMoves] AS [__PokemonMoves]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="__PokemonName" EntityType="Self.__PokemonName" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [__PokemonName].[ID] AS [ID], 
+    [__PokemonName].[Pokemon] AS [Pokemon]
+    FROM [dbo].[__PokemonName] AS [__PokemonName]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="__PokemonSprites" EntityType="Self.__PokemonSprites" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [__PokemonSprites].[ID] AS [ID], 
+    [__PokemonSprites].[Value] AS [Value]
+    FROM [dbo].[__PokemonSprites] AS [__PokemonSprites]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="__PokemonStats" EntityType="Self.__PokemonStats" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [__PokemonStats].[ID] AS [ID], 
+    [__PokemonStats].[Value] AS [Value]
+    FROM [dbo].[__PokemonStats] AS [__PokemonStats]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="__PokemonTypes" EntityType="Self.__PokemonTypes" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [__PokemonTypes].[ID] AS [ID], 
+    [__PokemonTypes].[Value] AS [Value]
+    FROM [dbo].[__PokemonTypes] AS [__PokemonTypes]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="TestModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="C__PokemonAbilities">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Value" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="C__PokemonHeldItems">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Value" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="C__PokemonMoves">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Value" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="C__PokemonName">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Pokemon" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="C__PokemonSprites">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Value" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="C__PokemonStats">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Value" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="C__PokemonTypes">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Value" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="TestEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="C__PokemonAbilities" EntityType="Self.C__PokemonAbilities" />
+          <EntitySet Name="C__PokemonHeldItems" EntityType="Self.C__PokemonHeldItems" />
+          <EntitySet Name="C__PokemonMoves" EntityType="Self.C__PokemonMoves" />
+          <EntitySet Name="C__PokemonName" EntityType="Self.C__PokemonName" />
+          <EntitySet Name="C__PokemonSprites" EntityType="Self.C__PokemonSprites" />
+          <EntitySet Name="C__PokemonStats" EntityType="Self.C__PokemonStats" />
+          <EntitySet Name="C__PokemonTypes" EntityType="Self.C__PokemonTypes" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="TestModelStoreContainer" CdmEntityContainer="TestEntities">
+          <EntitySetMapping Name="C__PokemonAbilities">
+            <EntityTypeMapping TypeName="TestModel.C__PokemonAbilities">
+              <MappingFragment StoreEntitySet="__PokemonAbilities">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Value" ColumnName="Value" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="C__PokemonHeldItems">
+            <EntityTypeMapping TypeName="TestModel.C__PokemonHeldItems">
+              <MappingFragment StoreEntitySet="__PokemonHeldItems">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Value" ColumnName="Value" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="C__PokemonMoves">
+            <EntityTypeMapping TypeName="TestModel.C__PokemonMoves">
+              <MappingFragment StoreEntitySet="__PokemonMoves">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Value" ColumnName="Value" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="C__PokemonName">
+            <EntityTypeMapping TypeName="TestModel.C__PokemonName">
+              <MappingFragment StoreEntitySet="__PokemonName">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Pokemon" ColumnName="Pokemon" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="C__PokemonSprites">
+            <EntityTypeMapping TypeName="TestModel.C__PokemonSprites">
+              <MappingFragment StoreEntitySet="__PokemonSprites">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Value" ColumnName="Value" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="C__PokemonStats">
+            <EntityTypeMapping TypeName="TestModel.C__PokemonStats">
+              <MappingFragment StoreEntitySet="__PokemonStats">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Value" ColumnName="Value" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="C__PokemonTypes">
+            <EntityTypeMapping TypeName="TestModel.C__PokemonTypes">
+              <MappingFragment StoreEntitySet="__PokemonTypes">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Value" ColumnName="Value" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
